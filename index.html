@@ -1,0 +1,239 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="NexusPHP" />
+    <title>ZmPT 织梦 :: 用户详情 - imdong - Powered by NexusPHP</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="search" type="application/opensearchdescription+xml" title="ZmPT 织梦 Torrents" href="opensearch.php" />
+    <link rel="stylesheet" href="styles/mediumfont.css" type="text/css" />
+    <link rel="stylesheet" href="styles/sprites.css" type="text/css" />
+    <link rel="stylesheet" href="pic/forum_pic/chs/forumsprites.css" type="text/css" />
+    <link rel="stylesheet" href="styles/ZmPT/theme20.css" type="text/css" />
+    <link rel="stylesheet" href="styles/ZmPT/DomTT.css" type="text/css" />
+    <link rel="stylesheet" href="styles/curtain_imageresizer.css" type="text/css" />
+    <link rel="stylesheet" href="styles/nexus.css" type="text/css" />
+    <link rel="stylesheet" href="styles/gifpool.css?v=2" type="text/css" />
+    <!-- 网站一键悼念灰色蒙层 -->
+    <!-- <link rel="stylesheet" href="css/gary-filter.css" type="text/css" /> -->
+    <link rel="stylesheet" href="pic/category/chd/scenetorrents/catspritesnew1.css" type="text/css" />
+    <link rel="alternate" type="application/rss+xml" title="Latest Torrents" href="torrentrss.php" />
+    <script type="text/javascript" src="js/curtain_imageresizer.js"></script>
+    <script type="text/javascript" src="js/ajaxbasic.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/domLib.js"></script>
+    <script type="text/javascript" src="js/domTT.js"></script>
+    <script type="text/javascript" src="js/domTT_drag.js"></script>
+    <script type="text/javascript" src="js/fadomatic.js"></script>
+    <link rel="stylesheet" href="ddlevelsfiles/new-base.css" type="text/css">
+    <style type="text/css">
+        .post-reward-box {
+            padding: 15px 30px;
+        }
+
+        .post-reward-box .form-control-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .post-reward-box .form-control-row .label {
+            width: 80px;
+        }
+
+        .post-reward-body-box {
+            margin-top: 80px;
+        }
+
+        .post-reward-body-box .post-reward-header {
+            margin: 15px 0 0;
+        }
+
+        .post-reward-body-box .post-reward-header .header-wrap {
+            font-weight: bold;
+            color: #ff5e52;
+            padding: 8px 0;
+            width: 30%;
+            background-color: #FFF4DD;
+        }
+
+        .post-reward-body-box td,
+        th {
+            text-align: left;
+            padding: 4px 20px 4px 0;
+            border: 0;
+        }
+
+        .post-reward-body-box .post-reward-view-more {
+            padding: 10px 0;
+        }
+
+        .post-reward-body-box .post-reward-view-more a {
+            color: #5e9be0;
+        }
+    </style>
+    <style type="text/css">
+        .sticky-promotion-box {
+            padding: 15px 30px;
+            color: black;
+        }
+
+        .sticky-promotion-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .sticky-promotion-box a {
+            color: black !important;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">jQuery.noConflict();</script>
+    <script type="text/javascript" src="vendor/layer-v3.5.1/layer/layer.js"></script>
+</head>
+
+<body>
+    <table class="head" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td class="clear">
+                <div class="logo">ZmPT 织梦</div>
+                <div class="slogan">为爱启航，造就梦想！</div>
+            </td>
+            <td class="clear nowrap" align="right" valign="middle">
+                <div style="margin: 10px 0px 10px 0px; display: inline-flex;" title='快来投喂我~~~'>
+                    <a href="/sitefreepool.php">
+                        <div
+                            style="height: 120px; width: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: rgb(254 177 71 / 39%); border-radius: 10px; backdrop-filter: blur(10px);">
+                            <div id='img-pool-gif-box'>
+                                <img />
+                            </div>
+                            <div
+                                style="margin-top: 6px; display: inline-flex; width: 100%; height: 6px; align-items: center;">
+                                <div
+                                    style="flex: 1; height: 100%; border: 1px solid #999; border-radius: 3px; background: white; overflow: hidden;">
+                                    <div id='banner-pool-bar'
+                                        style="width: 15.68%; height: 100%; background: #22c55e; border-radius: 2px;">
+                                    </div>
+                                </div>
+                                <span id='banner-pool-text' style="margin-left: 2px; font-size: 12px;">15.68%</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--	<a href="donate.php"><img src="pic/forum_pic/chs/donate.gif" alt="Make a donation" style="margin-left: 5px; margin-top: 50px;" /></a> -->
+                <div clss="mystyle">
+                    <a href="tencent://Message/?Uin=1360033458&websiteName=#=&Menu=yes"
+                        style="background: rgb(254 177 71);border-radius: 25px;padding: 2px 3px 2px;cursor: pointer;-moz-user-select: none;user-select: none;color: #000; font-size:20px">&nbsp&nbspNAS影音定制&nbsp&nbsp</a>
+                    <a href="donate.php"
+                        style="background: rgb(254 177 71);border-radius: 25px;padding: 2px 3px 2px;cursor: pointer;-moz-user-select: none;user-select: none;color: #000;font-size:20px">&nbsp&nbsp捐
+                        赠&nbsp&nbsp</a>
+                </div>
+                <br />
+            </td>
+        </tr>
+    </table>
+
+    <table class="mainouter" width="1200" cellspacing="0" cellpadding="5" align="center">
+        <tr>
+            <td id="nav_block" class="text" align="center">
+                <table class="main" width="1200" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="embedded">
+                            <div id="nav">
+                                <ul id="mainmenu" class="menu">
+                                    <li><a href="index.php" target="_self" style=""> 首 页 </a></li>
+                                    <li><a href="forums.php" target="_self" style=""> 论 坛 </a></li>
+                                    <li><a href="torrents.php" target="_self" style="" rel="nexus-menu-3"> 影 视 综 合 </a>
+                                    </li>
+                                    <li><a href="torrents.php?type=audio" target="_self" style="" rel="nexus-menu-8"> 声
+                                            音 类 </a></li>
+                                    <li><a href="torrents.php?type=pc" target="_self" style="" rel="nexus-menu-12"> 软 件
+                                            游 戏 </a></li>
+                                    <li><a href="torrents.php?type=keep" target="_self" style=""> 保 种 </a></li>
+                                    <li><a href="viewrequests.php" target="_self" style=""> 求 种 </a></li>
+                                    <li><a href="upload.php" target="_self" style=""> 发 布 </a></li>
+                                    <li><a href="rules.php" target="_self" style="" rel="nexus-menu-14"> 站 点 规 则 </a>
+                                    </li>
+                                    <li><a href="lucky.php" target="_self" style=""> 大 转 盘 </a></li>
+                                    <li><a href="contactstaff.php" target="_self" style=""> 联 系 管 理 </a></li>
+                                    <li><a href="#" target="_self" style="" rel="nexus-menu-18"> 管 理</a></li>
+                                </ul>
+                                <ul id="nexus-menu-3" class="ddsubmenustyle">
+                                    <li><a href="torrents.php" target="_self" style=""> 全 部 资 源 </a></li>
+                                    <li><a href="torrents.php?type=movie" target="_self" style=""> 影 视 </a>
+                                        <ul id="nexus-menu-4" class="ddsubmenustyle">
+                                            <li><a href="torrents.php?cat=401" target="_self" style=""> 电 影 </a></li>
+                                            <li><a href="torrents.php?cat=402" target="_self" style=""> 电 视 剧 </a></li>
+                                            <li><a href="torrents.php?cat=403" target="_self" style=""> 综 艺 </a></li>
+                                            <li><a href="torrents.php?cat=422" target="_self" style=""> 纪 录 片 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="torrents.php?type=anime" target="_self" style=""> 动 漫 </a>
+                                        <ul id="" class="">
+                                            <li><a href="torrents.php?cat=417" target="_self" style=""> 国 漫 </a></li>
+                                            <li><a href="torrents.php?cat=418" target="_self" style=""> 日 漫 </a></li>
+                                            <li><a href="torrents.php?cat=419" target="_self" style=""> 韩 漫 </a></li>
+                                            <li><a href="torrents.php?cat=420" target="_self" style=""> 欧 美 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="torrents.php?type=other" target="_self" style=""> 其 他 </a></li>
+                                </ul>
+                                <ul id="nexus-menu-8" class="ddsubmenustyle">
+                                    <li><a href="torrents.php?cat=424" target="_self" style="">声音类-有声书</a></li>
+                                    <li><a href="torrents.php?cat=423" target="_self" style="">声音类-音乐</a></li>
+                                </ul>
+                                <ul id="nexus-menu-12" class="ddsubmenustyle">
+                                    <li><a href="torrents.php?cat=426" target="_self" style="">软件游戏-游戏</a></li>
+                                    <li><a href="torrents.php?cat=425" target="_self" style="">软件游戏-软件</a></li>
+                                </ul>
+                                <ul id="nexus-menu-14" class="ddsubmenustyle">
+                                    <li><a href="topten.php" target="_self" style=""> 排 行 榜 </a></li>
+                                    <li><a href="faq.php" target="_self" style=""> 常 见 问 题 </a></li>
+                                    <li><a href="rules.php" target="_self" style=""> 规 则 </a></li>
+                                </ul>
+                                <ul id="nexus-menu-18" class="ddsubmenustyle">
+                                    <li><a href="log.php" target="_self" style=""> 日 志 </a></li>
+                                    <li><a href="staff.php" target="_self" style=""> 管 理 组 </a></li>
+                                    <li><a href="pay1.php" target="_self" style="">临时VIP</a></li>
+                                    <li><a href="top.php" target="_blank" style="">发种排行</a></li>
+                                    <li><a href="up.php" target="_blank" style="">工资统计发放</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="info_block" cellpadding="4" cellspacing="0" border="0" width="100%"
+                    style="background: #87878730;border-radius: 5px;">
+                    <tr>
+                        <td style="border:none">
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="bottom" align="left">
+                                        <span class="medium">
+                                            <span class="nowrap"><a href="https://zmpt.cc/userdetails.php?id=16695"
+                                                    class='Administrator_Name'><b>waibuzheng</b></a><img
+                                                    src="https://img.pterclub.com/images/2023/08/22/1b2049e1390b4d801.png"
+                                                    title="织梦1周年纪念勋章" class="nexus-username-medal preview"
+                                                    style="max-height: 11px;max-width: 11px;margin-left: 2pt" /></span>
+                                            <a href="attendance.php" class="">[签到已得65, 补签卡: 0]</a>
+                                            <font class="color_ratio">分享率:</font> 38.659 <font class='color_uploaded'>
+                                                上传量:</font> 371.78 GB <font class='color_downloaded'> 下载量:</font> 9.62
+                                            GB <font class='color_active'>当前活动:</font> <img class="arrowup"
+                                                alt="Torrents seeding" title="当前做种" src="pic/trans.gif" />121 <img
+                                                class="arrowdown" alt="Torrents leeching" title="当前下载"
+                                                src="pic/trans.gif" />0&nbsp;&nbsp;
+
+                                            <font class='color_connectable'></font>
+                                            <a href="mybonus.php" id="self_bonus">
+                                                <font class='color_bonus'>魔力值 </font>2,932.2
+                                            </a>
+                                            <br />
+                                            <div class="divmy" style="margin-top: 5px">
+                                                <a href="myhr.php"
+                                                    style="background: rgb(254 177 71);border-radius: 5px;padding: 2px 3px 2px;cursor: pointer;-moz-user-sele…
